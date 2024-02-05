@@ -42,7 +42,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 There is also an AUR package for nvchad but it doesnt seem to work for me
 
 ## AUR Helper
-Follow the following command to install `yay`
+Follow the following commands to install `yay`
 ```
 sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
@@ -66,10 +66,28 @@ sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
 ```
 
-# Audio Visualiser
+## Audio Visualiser
 Install aur package `cava`
 
 might need to edit cava config `/.config/cava/config` and uncomment the line `method = pulse`
 
+## Screen Sharing
+I found that the best way in general is to pipe the screensharing through OBS. 
+
+install: obs-studio, v4l2loopback-dkms
+yay -S xdg-desktop-portal-hyprland-git
+https://gist.github.com/PowerBall253/2dea6ddf6974ba4e5d26c3139ffb7580
+qt6-wayland
+
+You might want to install the 'linux-headers' and 'dkms' packages from the repos.
+
+# Other handy software
+This is just for other useful software that can be easily installed.
+- For mounting external devices, `udisks2`
+
 # NEXT STEPS 
 Get a VM going. So i can try install random shit
+
+# Other useful resources
+https://wiki.archlinux.org/title/wayland
+https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway
