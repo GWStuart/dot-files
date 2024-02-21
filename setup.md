@@ -41,6 +41,9 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 There is also an AUR package for nvchad but it doesnt seem to work for me
 
+Within Nvchad there is alot you can configure.
+See the cheatsheet with `leader, c, h`
+
 ## AUR Helper
 Follow the following commands to install `yay`
 ```
@@ -58,13 +61,25 @@ Choose `pipewire` in the options
 
 ## Spotify
 Install aur package `spotify-wayland`
-Install aur package `spicetify-cli`
 
-run the following commands to change write permission
+Install spicetify. There is an AUR package but it doesn't seem to work for me.
+```
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+```
+
+I'm pretty sure you also need to run the following lines but not entierly sure
 ```
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
 ```
+
+From the marketplace install the following:
+- An adblocker: adblock
+- A custom theme: 
+
+# Discord
+
+For screensharing install aur package: `discord-screenaudio`
 
 ## Audio Visualiser
 Install aur package `cava`
@@ -84,6 +99,7 @@ You might want to install the 'linux-headers' and 'dkms' packages from the repos
 # Other handy software
 This is just for other useful software that can be easily installed.
 - For mounting external devices, `udisks2`
+- For accessing the clipboard, `wl-clipboard`
 
 # NEXT STEPS 
 Get a VM going. So i can try install random shit
