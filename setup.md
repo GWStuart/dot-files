@@ -12,6 +12,7 @@ Exit with `mod + m`
 # First steps
 install: `alacritty`, `waybar`, `wofi`
 copy the contents of the `config` folder into `~/.config`
+copy the `.bashrc` file and `Scripts` folder to `~`
 
 ## Fonts
 install nerd fonts: `ttf-jetbrains-mono-nerd`

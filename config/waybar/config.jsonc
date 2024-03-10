@@ -1,0 +1,136 @@
+{
+  "layer": "top",
+
+  "modules-left": ["custom/icon", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock#date"],
+  "modules-right": ["backlight", "pulseaudio", "network", "battery", "clock#time"],
+
+  "custom/icon": {
+    "format": "  ", /*    */
+    "on-click": "alacritty -e ~/.config/waybar/popup.sh",
+    "tooltip": false
+  },
+
+  "image#icon": {
+      "path": "/home/will/.config/waybar/icon.png",
+      "size": 16 
+  },
+
+  "hyprland/workspaces": {
+	  "format": "{icon}",
+	  "format-icons": {
+	    "1": "I",
+	    "2": "II",
+	    "3": "III",
+	    "4": "IV",
+	    "5": "V",
+	    "6": "VI",
+	    "7": "VII",
+	    "8": "VIII",
+	    "9": "IX",
+	    "10": "X",
+	    "default": "~"
+    },
+	  "alternative-icons": {
+	    "1": "󰈹",
+	    "2": " ", /*   󱃖 󱃖       󰈮    ", */
+	    "3": " ",
+      "4": " ",
+	    "9": " ",
+	    "10": "",
+	    "default": "󰝦"
+	  },
+    "persistent-workspaces": {
+      "*": 5
+    }	
+  },
+    
+    "hyprland/window": {
+	    "format": "{initialTitle}",
+      "max-length": 50
+    },
+
+    "pulseaudio": {
+      "format": "󰕾",
+      "tooltip-format": "{volume}% 󰕾" 
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+   
+     
+    "network": {
+        "format-wifi": "󰖩",
+        "format-disconnected": "󰖪", //An empty format will hide the module.
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    
+    "clock#time": {
+      "format": "{:%H:%M} ",
+      "format-alt": "{:%a, %d/%m/%g}",
+      "actions":  {
+              "on-click-right": "mode",
+              "on-click-forward": "tz_up",
+              "on-click-backward": "tz_down",
+              "on-scroll-up": "shift_up",
+              "on-scroll-down": "shift_down"
+              }
+    },
+
+    "clock#date": {
+      "format": "{:%d/%m/%g}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+        "mode"          : "month",
+        "format": {
+          "months":     "<span color='#ffffff'><b>{}</b></span>",
+          "days":       "<span color='#ffffff'><b>{}</b></span>",
+          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+          "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+        }
+      }
+    },
+
+    "group/power": {
+	    "orientation": "inherit",
+      "drawer": {
+        "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "custom/power", // First element is the "group leader" and won't ever be hidden
+        "custom/quit",
+        "custom/lock",
+        "custom/reboot"
+      ]
+    },
+    
+    "custom/quit": {
+        "format": "󰗼",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+
+    "custom/lock": {
+        "format": "󰍁",
+        "tooltip": false,
+        "on-click": "swaylock"
+    },
+
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "shutdown now"
+    }
+}
