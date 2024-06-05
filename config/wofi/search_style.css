@@ -1,36 +1,23 @@
 * {
   border-radius: 5px;
   border: none;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 window {
   background-color: rgb(43, 48, 59);
-  border: 1px solid #33ccff;
+  border: 4px solid #33ccff;
   color: white;
 }
 
 #entry:selected {
   background-color: #33ccff;
-  background: linear-gradient(90deg, #33ccff, #00ff99)
-}
-
-#text:selected {
-  color: #333333;
 }
 
 #input {
   background-color: rgb(43, 48, 59);
   color: #ffffff;
-  margin: 5px;
-  box-shadow: none;
-}
-
-#entry {
+  margin: 10px;
   padding: 5px;
-}
-
-image {
-  margin-left: 4px;
-  margin-right: 4px;
+  box-shadow: none;
 }
