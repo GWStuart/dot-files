@@ -1,0 +1,13 @@
+hide_scroll=true
+insensitive=true
+no_actions=true
+
+lines=4
+width = 15%
+location=2
+yoffset=36
+halign=center
+content_halign=center
+key_down=j
+key_up=k
+hide_search=true
