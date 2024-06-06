@@ -1,14 +1,12 @@
 * {
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   font-size: 20px;
-  margin: 0px;
-  padding: 0px;
 }
 
 window {
   background-color: rgb(43, 48, 59);
-  border: 1px solid #33ccff;
+  border: 3px solid #33ccff;
   color: white;
 }
 
@@ -21,13 +19,20 @@ window {
   color: #333333;
 }
 
+#input {
+  border-radius: 10px;
+  background-color: rgb(43, 48, 59);
+  color: #ffffff;
+  margin: 5px;
+  box-shadow: none;
+}
+
 #entry {
+  border-radius: 10px;
   padding: 5px;
 }
 
-#input {
-  height: 0px;
-  padding: 0px;
-  margin: 0px;
-  font-size: 0px;
+image {
+  margin-left: 4px;
+  margin-right: 4px;
 }
