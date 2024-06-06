@@ -6,4 +6,7 @@ insensitive=true
 no_actions=true
 key_expand=Right
 
-line = 12
+lines = 1
+width = 35%
+location=2
+yoffset=36

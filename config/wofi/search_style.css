@@ -1,12 +1,12 @@
 * {
-  border-radius: 5px;
+  border-radius: 35px;
   border: none;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 window {
   background-color: rgb(43, 48, 59);
-  border: 4px solid #33ccff;
+  border: 3px solid #33ccff;
   color: white;
 }
 

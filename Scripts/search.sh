@@ -1,3 +1,3 @@
 #!/bin/bash
-query="$( echo "" | wofi --style="/home/will/.config/wofi/search_style.css" --lines=1 --width=25% --location=2 --yoffset=36 --show dmenu -p "Search: ")" 
+query="$( echo "" | wofi --style="/home/will/.config/wofi/search_style.css" --conf="/home/will/.config/wofi/search_config" --show dmenu)" 
 [ -n "${query}" ] && firefox https://www.google.com/search?q="${query}" &
