@@ -1,0 +1,12 @@
+prompt=Find
+hide_scroll=true
+allow_images=true
+image_size=24
+insensitive=true
+no_actions=true
+key_expand=Right
+
+lines = 9
+width = 35%
+location=2
+yoffset=36

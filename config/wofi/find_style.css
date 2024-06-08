@@ -1,5 +1,5 @@
 * {
-  border-radius: 35px;
+  border-radius: 10px;
   border: none;
   font-size: 22px;
 }
@@ -13,6 +13,11 @@ window {
 #entry:selected {
   background-color: #33ccff;
   background: linear-gradient(90deg, #33ccff, #00ff99)
+}
+
+#entry {
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #input {

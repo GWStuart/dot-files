@@ -1,3 +1,4 @@
 #!/bin/bash
-query="$( echo "" | wofi --style="$HOME/.config/wofi/search_style.css" --conf="$HOME/.config/wofi/search_config" --prompt="Find" --show dmenu)" 
-exec "alacritty --working-directory=${query}"
+query="$( python ~/Scripts/find.py | wofi --style="$HOME/.config/wofi/find_style.css" --conf="$HOME/.config/wofi/find_config" --show dmenu)" 
+# python ~/Scripts/find.py | wofi --show dmenu
+alacritty --working-directory=${query}
