@@ -97,6 +97,10 @@ qt6-wayland
 
 You might want to install the 'linux-headers' and 'dkms' packages from the repos.
 
+# Notification Daemon
+Currently using swaync
+There are config files for it which I will hopefully include in this repository.
+
 # Other handy software
 This is just for other useful software that can be easily installed.
 - For mounting external devices, `udisks2`
