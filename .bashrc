@@ -20,3 +20,7 @@ alias todo="~/projects/pretty-markdown/venv/bin/python ~/projects/pretty-markdow
 alias md="~/projects/pretty-markdown/venv/bin/python ~/projects/pretty-markdown/md.py"
 alias render="~/projects/ascii-video-player/venv/bin/python ~/projects/ascii-video-player/render.py"
 alias colour="~/projects/terminal-colour-picker/venv/bin/python ~/projects/terminal-colour-picker/rgb.py"
+
+# Change bash prompt
+# export PS1="[\w]\$ "
+
