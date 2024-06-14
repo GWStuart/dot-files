@@ -3,6 +3,9 @@
 
 import = ["/home/will/.config/alacritty/one-half-dark-alacritty.toml"]
 
+[font]
+size = 14
+
 [font.bold]
 family = "monospace"
 
