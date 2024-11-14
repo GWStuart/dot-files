@@ -16,6 +16,7 @@ export LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so  # for usb webcam
 
 # My custom options
 alias suspend="systemctl suspend"
+alias open="xdg-open"
 
 # My projects
 alias pman="~/projects/pman/venv/bin/python ~/projects/pman/pman.py"
