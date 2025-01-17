@@ -4,8 +4,12 @@ msgID=1234
 volume_change="$1"
 
 if [ "$volume_change" = "toggle" ]; then
+    if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "\[MUTED\]"; then
+        notify-send "Audio Un-Muted 󰕾" -r $msgID
+    else
+        notify-send "Audio Muted 󰖁" -r $msgID
+    fi
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    # notify-send "Toggled sound" -r $msgID
     exit 0
 fi
 
