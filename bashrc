@@ -7,17 +7,20 @@ force_color_prompt=yes
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
-
-export PATH="$PATH:$HOME/.spicetify:$HOME/.local/share/gem/ruby/3.3.0/bin"
 export LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so  # for usb webcam
 
+# Add certain directories to the path
+# Noteably the ~/Script directory is in my path so be careful with this
+export PATH="$PATH:$HOME/Scripts:$HOME/.spicetify:$HOME/.local/share/gem/ruby/3.3.0/bin"
+
 # My custom options
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 alias suspend="systemctl suspend"
 alias open="xdg-open"
 alias vim="nvim"
+alias pytree="tree -I '*__pycache__|venv'"
 
 # My projects
 alias pman="~/github/pman/venv/bin/python ~/github/pman/pman.py"

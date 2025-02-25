@@ -3,12 +3,25 @@
 msgID=1234
 volume_change="$1"
 
+# check if the provided volume is empty
+# if so then print the current volume
+if [ "$volume_change" = "" ]; then
+    volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+    notify-send "$volume%" -r $msgID
+    echo "$volume%"
+    exit 0
+fi
+
+# check if the option was to toggle
 if [ "$volume_change" = "toggle" ]; then
     if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "\[MUTED\]"; then
         notify-send "Audio Un-Muted 󰕾" -r $msgID
+        echo "Audio Un-Muted 󰕾"
     else
         notify-send "Audio Muted 󰖁" -r $msgID
+        echo "Audio Muted 󰖁"
     fi
+
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     exit 0
 fi
@@ -32,3 +45,4 @@ fi
 roundedVolume=$(printf "%.0f" "$newVolume")
 
 notify-send "$roundedVolume%" -r $msgID -h int:value:"$roundedVolume" -a volume
+echo "new volume: $roundedVolume%"
