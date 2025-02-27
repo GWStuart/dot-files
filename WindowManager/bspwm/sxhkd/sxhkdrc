@@ -100,6 +100,9 @@ super + ctrl + shift + space
 #super + alt + {h,j,k,l}
 #	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
+super + alt + {h,j,k,l}
+    bspc node -s {west, south, north, east}
+
 super + space
     bspc rule -a Alacritty -o state=floating && alacritty
 
