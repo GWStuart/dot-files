@@ -30,19 +30,19 @@
 	    "9": "IX",
 	    "10": "X",
 	    "default": "~"
-    },
+      },
 	  "alternative-icons": {
 	    "1": "󰈹",
 	    "2": " ", /*   󱃖 󱃖       󰈮    ", */
 	    "3": " ",
-      "4": " ",
+        "4": " ",
 	    "9": " ",
 	    "10": "",
 	    "default": "󰝦"
 	  },
-    "persistent-workspaces": {
-      "*": 5
-    }	
+      "persistent-workspaces": {
+        "*": 5
+      }	
   },
     
     "hyprland/window": {
