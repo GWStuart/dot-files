@@ -1,7 +1,8 @@
-# Hyprland Dot Files
-These are my hyprland dot-files and are what I currently use on my main machine.
+# Dot Files
+These are my dot-files and are what I currently use on my main machine.
 
-For guide on the basic system installation see [here](setup.md)
+For guide on the basic system installation see [setup.md](setup.md)
+
 For instructions on how to apply my custom configurations see below.
 
 # Basic Distro Setup
@@ -31,3 +32,4 @@ To implement these customisation options:
 - Move the [Scipts](software/Scipts) folder to your home directory `~` (or copy the contents if it already exists).
 - Copy the contents of the [config](software/config) folder to `~/.config/`
 - Move the [bashrc](software/bashrc) file to your home directory and rename it `.bashrc` (with the dot).
+- Move the [vim](software/vim) folder to your home directory and rename it `.vim` (with the dot).

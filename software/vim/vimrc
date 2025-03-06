@@ -1,0 +1,78 @@
+"--------------------------------------------------------------------
+"   HIGHLIGHTING AND SYNTAX
+"--------------------------------------------------------------------
+colorscheme sonokai
+" colorscheme slate
+syntax on
+set showmatch                   " Highlight matching parentheses
+set t_Co=256                    " Allow vim to display all colours
+set termguicolors
+" set background=dark
+
+
+"--------------------------------------------------------------------
+"   EDITOR OPTIONS
+"--------------------------------------------------------------------
+set relativenumber number
+set wildmenu
+set ruler                       " Display the ruler in the bottom right corner
+set noerrorbells                " Disable error bell sound effects
+set showcmd
+set showmode
+
+
+"--------------------------------------------------------------------
+"   INDENTATION
+"--------------------------------------------------------------------
+set tabstop=4                   " Set the number of space that a tab is equal to
+set expandtab                   " Write tabs as spaces
+set autoindent
+set shiftwidth=4                " Set the number of columns to indent
+set shiftround
+set smarttab
+filetype indent on          " Allow loading of language specific indentation
+
+
+"--------------------------------------------------------------------
+"   COLOUR COLUMN
+"--------------------------------------------------------------------
+set colorcolumn=81              " Create a column at the 81 character line
+" highlight ColorColumn ctermbg=black guibg=black
+
+
+"--------------------------------------------------------------------
+"   SEARCH OPTIONS
+"--------------------------------------------------------------------
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+
+"--------------------------------------------------------------------
+"   TEXT OPTIONS
+"--------------------------------------------------------------------
+set encoding=utf-8
+set linebreak                    " Avoid wrapping in the middle of a word
+set scrolloff=5                  " Min number of lines above/below the cursor
+set sidescrolloff=5              " Same as above but for horizontal scrolling
+set wrap
+" set nowrap
+
+
+"--------------------------------------------------------------------
+"   MISCELLANEOUS
+"--------------------------------------------------------------------
+set foldmethod=syntax
+set foldlevelstart=99
+"set cursorline                  " Highlight the current line
+"set mouse=a                     " Enable mouse support
+"set backspace=indent,eol,start  " Allow backspace to work across lines
+
+
+"--------------------------------------------------------------------
+"   STYLE GUIDE
+"--------------------------------------------------------------------
+" Map Ctrl-K to run clang-format to reformat the code
+map <C-K> mzggVG:py3f /local/courses/csse2310/bin/clang-format.py<cr>'zzz
+imap <C-K> <c-o>:py3f /local/courses/csse2310/bin/clang-format.py<cr>

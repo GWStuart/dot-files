@@ -1,29 +1,32 @@
-#
-# ~/.bashrc
-#
-
-force_color_prompt=yes
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-# Change bash prompt
-# export PS1="[\w]\$ "
+#--------------------------------------------------------------------
+#   SET THE PROMPT
+#--------------------------------------------------------------------
 PS1='[\u@\h \W]\$ '
-export LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so  # for usb webcam
+# PS1='\[\033[38;5;177m\]\u@\h: \W\$\[\033[00m\] '
+# PS1='\[\033[38;2;{r};{g};{b}m\]\u@\h: \W\$\[\033[00m\] '
+# PS1='[\u@\h \W]\033[38;5;177m\$\033[00m '
+# PS1='\033[1m[\u@\h \W]\$\033[00m '
+# PS1="[\w]\$ "
 
-# Add certain directories to the path
-# Noteably the ~/Script directory is in my path so be careful with this
+
+#--------------------------------------------------------------------
+#   DEFINE ENVIRONMENT VARIABLES
+#--------------------------------------------------------------------
+# Note that I have added the ~/Scripts folder to the PATH
+export LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so  # for usb webcam
 export PATH="$PATH:$HOME/Scripts:$HOME/.spicetify:$HOME/.local/share/gem/ruby/3.3.0/bin:$HOME/.local/bin"
 
-# My custom options
+
+#--------------------------------------------------------------------
+#   DEFINE ALIASES
+#--------------------------------------------------------------------
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias suspend="systemctl suspend"
 alias open="xdg-open"
 alias vim="nvim"
 alias pytree="tree -I '*__pycache__|venv'"
-
+alias xclip="xclip -sel c"
 # My projects
 alias pman="~/github/pman/venv/bin/python ~/github/pman/pman.py"
 alias todo="~/github/pretty-markdown/venv/bin/python ~/github/pretty-markdown/md.py ~/Documnets/todo.md"
@@ -35,5 +38,10 @@ alias dots="~/github/Screen-Savers/venv/bin/python ~/github/Screen-Savers/dots.p
 alias crop="~/Scripts/crop.sh"
 alias trim="~/Scripts/trim.sh"
 
-# not sure what this does? Some rust thing i think
-. "$HOME/.cargo/env"
+
+#--------------------------------------------------------------------
+#   MISCELLANEOUS
+#--------------------------------------------------------------------
+force_color_prompt=yes
+[[ $- != *i* ]] && return  # If not running interactively, don't do anything
+
