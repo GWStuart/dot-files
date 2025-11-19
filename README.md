@@ -1,18 +1,13 @@
 # Dot Files
-These are my dot-files and are what I currently use on my main machine.
+Just a collection of my personal linux dot files.
 
-For guide on the basic system installation see [setup.md](setup.md)
+My current setup consists of:
+- Distro: Debian Trixie
+- Window Manager: i3
 
-For instructions on how to apply my custom configurations see below.
-
-# Basic Distro Setup
-For a guide on a basic Arch Linux installation see [setup.md](setup.md).
-
-From the guide you can choose whether to install:
-- Hyprland (a wayland compositor)
-- bspwm (an X11 window manager)
-
-I personally alternate between the two. 
+I have the config files for some of my old setups as well including
+- Archlinux + Hyprland
+- Archlinux + Bspwm
 
 # WindowManager setup
 You can find the config files for the support window manager inside the [WindowManager](WindowManager) folder.
