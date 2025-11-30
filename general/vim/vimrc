@@ -1,4 +1,21 @@
 "--------------------------------------------------------------------
+"   VIM-PLUG PLUGINS
+"--------------------------------------------------------------------
+
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+
+augroup vimtex_build_dir
+  autocmd!
+  autocmd FileType tex let &l:makeprg = 'latexmk -pdf -outdir=build -synctex=1 -interaction=nonstopmode %'
+augroup END
+
+call plug#begin()
+Plug 'lervag/vimtex'
+call plug#end()
+
+"--------------------------------------------------------------------
 "   HIGHLIGHTING AND SYNTAX
 "--------------------------------------------------------------------
 colorscheme sonokai
@@ -56,14 +73,15 @@ set encoding=utf-8
 set linebreak                    " Avoid wrapping in the middle of a word
 set scrolloff=5                  " Min number of lines above/below the cursor
 set sidescrolloff=5              " Same as above but for horizontal scrolling
-set wrap
-" set nowrap
+" set wrap
+set nowrap
 
 
 "--------------------------------------------------------------------
 "   MISCELLANEOUS
 "--------------------------------------------------------------------
-set foldmethod=syntax
+"set foldmethod=syntax
+set foldmethod=manual
 set foldlevelstart=99
 "set cursorline                  " Highlight the current line
 "set mouse=a                     " Enable mouse support
