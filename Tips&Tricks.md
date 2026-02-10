@@ -18,6 +18,6 @@ The easiest way to find the values for `WDITH`, `HEIGHT`, `LEFT` and `TOP` is wi
 ## Video Trimming
 Trimming a video is quite easy with `ffmpeg` and can be achieved as follows,
 ```
-ffmpeg -ss START -to END -i INPUT_FILE -c copy output.mp4
+ffmpeg -ss START -to END -i INPUT_FILE -c copy OUTPUT_FILE
 ```
 Here `START` and `END` can be specified as `HH:MM:SS.miliseconds`
