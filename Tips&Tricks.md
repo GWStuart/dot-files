@@ -21,3 +21,6 @@ Trimming a video is quite easy with `ffmpeg` and can be achieved as follows,
 ffmpeg -ss START -to END -i INPUT_FILE -c copy OUTPUT_FILE
 ```
 Here `START` and `END` can be specified as `HH:MM:SS.miliseconds`
+
+## LaTeX
+Use `de-macro` to replace macro definitions.
