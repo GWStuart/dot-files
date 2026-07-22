@@ -61,3 +61,6 @@ getnews () {
 force_color_prompt=yes
 [[ $- != *i* ]] && return  # If not running interactively, don't do anything
 
+# some stuff for installing Ruby Gems used for Jekyll
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
