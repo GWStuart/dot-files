@@ -22,5 +22,11 @@ ffmpeg -ss START -to END -i INPUT_FILE -c copy OUTPUT_FILE
 ```
 Here `START` and `END` can be specified as `HH:MM:SS.miliseconds`
 
+## Video Audio Removal
+If you want to remove the audio channel from a video use the following command,
+```
+ffmpeg -i INPUT -an -c:v copy OUTPUT
+```
+
 ## LaTeX
 Use `de-macro` to replace macro definitions.
